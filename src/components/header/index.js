@@ -1,18 +1,11 @@
+import React from 'react'
 import NameTag from './NameTag'
+import './header.css'
 
 function Header() {
 
   return (
-    <div style={{
-      position: 'relative',
-      left: 0,
-      top: 0,
-      right: 0,
-      height: 100,
-      backgroundColor: '#c0c0c0',
-      display: 'flex',
-      flexDirection: 'row'
-    }}>
+    <div className="header-container">
       <NameTag />
     </div>
   )

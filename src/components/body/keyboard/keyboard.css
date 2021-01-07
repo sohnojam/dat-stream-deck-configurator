@@ -1,0 +1,62 @@
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(76, 6px);
+  grid-template-rows: repeat(6, 45px);
+  grid-gap: 5px;
+  justify-content: center;
+  padding: 15px;
+  width: 830px;
+  border-radius: 15px;
+}
+
+.key {
+  grid-column: span 5;
+  background-color: #d0d0d0;
+  color: #202020;
+  display: grid;
+  justify-content: start;
+  align-items: flex-start;
+  padding-left: 5px;
+  padding-top: 2px;
+  font-family: sans-serif;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: all .25s ease-in-out;
+}
+.key:hover {
+  background-color: #a0a0a0;
+  cursor: pointer;
+  box-shadow: 0 0 3px 0px rgba(230, 230, 230, 0.8);
+}
+
+.back {
+  grid-column: span 11;
+}
+
+.tab {
+  grid-column: span 9;
+}
+
+.or {
+  grid-column: span 7;
+}
+
+.caps-lock {
+  grid-column: span 10;
+}
+
+.enter {
+  grid-column: span 11;
+}
+
+.shift {
+  grid-column: span 13;
+}
+
+.control, .root, .alt, .fn {
+  grid-column: span 6;
+}
+
+.space {
+  grid-column: span 34;
+}
