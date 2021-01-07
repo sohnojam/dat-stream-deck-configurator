@@ -4,7 +4,11 @@ import Keyboard from './keyboard'
 
 function Body() {
   return (
-    <Keyboard />
+    <div className="body">
+      <div className="body-container">
+        <Keyboard />
+      </div>
+    </div>
   )
 }
 
