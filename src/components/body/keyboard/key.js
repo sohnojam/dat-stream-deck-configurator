@@ -5,7 +5,11 @@ function Key({ special, data }) {
 
   return (
     <div className={`key${special ? ` ${special}` : ''}`}>
-      {data ? data.label ? data.label : '' : ''}
+      <div className="key-label">
+        {data ? data.label ? data.label : '' : ''}
+      </div>
+      <div className="key-state-container">
+      </div>
     </div>
   )
 
