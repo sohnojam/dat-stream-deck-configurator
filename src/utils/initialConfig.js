@@ -10,6 +10,7 @@ const initialConfig = {
       color: '#000000',
       keys: [
         {
+          label: 'C',
           keyData: {
             key: {
               name: 'c'
@@ -25,6 +26,7 @@ const initialConfig = {
           ]
         },
         {
+          label: 'X',
           keyData: {
             key: {
               name: 'x'
@@ -45,6 +47,7 @@ const initialConfig = {
       color: '#ff0000',
       keys: [
         {
+          label: 'Backspace',
           keyData: {
             key: {
               name: 'backspace'

@@ -9,6 +9,7 @@ function Body({
   selectedState,
   setSelectedState,
   addState,
+  modifyState,
   removeState,
   keys,
   selectedKey,
@@ -20,9 +21,28 @@ function Body({
   return (
     <div className="body">
       <div className="body-container">
-        <States states={states} selectedState={selectedState} setSelectedState={setSelectedState} addState={addState} removeState={removeState} />
-        <Keyboard keys={keys} selectedState={selectedState} selectedKey={selectedKey} setSelectedKey={setSelectedKey} />
-        <Selected selectedKey={selectedKey} addKey={addKey} modifyKey={modifyKey} removeKey={removeKey} />
+        <States
+          states={states}
+          selectedState={selectedState}
+          setSelectedState={setSelectedState}
+          addState={addState}
+          modifyState={modifyState}
+          removeState={removeState}
+        />
+
+        <Keyboard
+          keys={keys}
+          selectedState={selectedState}
+          selectedKey={selectedKey}
+          setSelectedKey={setSelectedKey}
+        />
+
+        <Selected
+          selectedKey={selectedKey}
+          addKey={addKey}
+          modifyKey={modifyKey}
+          removeKey={removeKey}
+        />
       </div>
     </div>
   )
