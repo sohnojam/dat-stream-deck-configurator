@@ -1,11 +1,21 @@
 import React from 'react'
 import './selected.css'
+import NoSelection from './noSelection'
 
-function Selected() {
+function Selected({
+  selectedKey,
+  addKey,
+  modifyKey,
+  removeKey
+}) {
 
   return (
-    <div className='selected-container'>
-      Information about the selected key will go here
+    <div className="selected-container">
+      {selectedKey ?
+        <span>things</span>
+      :
+        <NoSelection />
+      }
     </div>
   )
 
