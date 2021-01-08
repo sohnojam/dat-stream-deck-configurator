@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/dat-stream-deck-configurator/static/css/main.9aef8308.chunk.css",
-    "main.js": "/dat-stream-deck-configurator/static/js/main.85f3c9e8.chunk.js",
-    "main.js.map": "/dat-stream-deck-configurator/static/js/main.85f3c9e8.chunk.js.map",
-    "runtime-main.js": "/dat-stream-deck-configurator/static/js/runtime-main.c6ec1d87.js",
-    "runtime-main.js.map": "/dat-stream-deck-configurator/static/js/runtime-main.c6ec1d87.js.map",
-    "static/js/2.9651c4ea.chunk.js": "/dat-stream-deck-configurator/static/js/2.9651c4ea.chunk.js",
-    "static/js/2.9651c4ea.chunk.js.map": "/dat-stream-deck-configurator/static/js/2.9651c4ea.chunk.js.map",
-    "static/js/3.e4d0dcd6.chunk.js": "/dat-stream-deck-configurator/static/js/3.e4d0dcd6.chunk.js",
-    "static/js/3.e4d0dcd6.chunk.js.map": "/dat-stream-deck-configurator/static/js/3.e4d0dcd6.chunk.js.map",
+    "main.css": "/dat-stream-deck-configurator/static/css/main.146afb78.chunk.css",
+    "main.js": "/dat-stream-deck-configurator/static/js/main.2096c036.chunk.js",
+    "main.js.map": "/dat-stream-deck-configurator/static/js/main.2096c036.chunk.js.map",
+    "runtime-main.js": "/dat-stream-deck-configurator/static/js/runtime-main.599c56fd.js",
+    "runtime-main.js.map": "/dat-stream-deck-configurator/static/js/runtime-main.599c56fd.js.map",
+    "static/js/2.c59e6dce.chunk.js": "/dat-stream-deck-configurator/static/js/2.c59e6dce.chunk.js",
+    "static/js/2.c59e6dce.chunk.js.map": "/dat-stream-deck-configurator/static/js/2.c59e6dce.chunk.js.map",
+    "static/js/3.e66fe44d.chunk.js": "/dat-stream-deck-configurator/static/js/3.e66fe44d.chunk.js",
+    "static/js/3.e66fe44d.chunk.js.map": "/dat-stream-deck-configurator/static/js/3.e66fe44d.chunk.js.map",
     "index.html": "/dat-stream-deck-configurator/index.html",
-    "static/css/main.9aef8308.chunk.css.map": "/dat-stream-deck-configurator/static/css/main.9aef8308.chunk.css.map",
-    "static/js/2.9651c4ea.chunk.js.LICENSE.txt": "/dat-stream-deck-configurator/static/js/2.9651c4ea.chunk.js.LICENSE.txt"
+    "static/css/main.146afb78.chunk.css.map": "/dat-stream-deck-configurator/static/css/main.146afb78.chunk.css.map",
+    "static/js/2.c59e6dce.chunk.js.LICENSE.txt": "/dat-stream-deck-configurator/static/js/2.c59e6dce.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c6ec1d87.js",
-    "static/js/2.9651c4ea.chunk.js",
-    "static/css/main.9aef8308.chunk.css",
-    "static/js/main.85f3c9e8.chunk.js"
+    "static/js/runtime-main.599c56fd.js",
+    "static/js/2.c59e6dce.chunk.js",
+    "static/css/main.146afb78.chunk.css",
+    "static/js/main.2096c036.chunk.js"
   ]
 }
