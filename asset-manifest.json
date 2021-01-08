@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/dat-stream-deck-configurator/static/css/main.13c347c5.chunk.css",
-    "main.js": "/dat-stream-deck-configurator/static/js/main.2d33c041.chunk.js",
-    "main.js.map": "/dat-stream-deck-configurator/static/js/main.2d33c041.chunk.js.map",
+    "main.css": "/dat-stream-deck-configurator/static/css/main.db710410.chunk.css",
+    "main.js": "/dat-stream-deck-configurator/static/js/main.9d9c5d0c.chunk.js",
+    "main.js.map": "/dat-stream-deck-configurator/static/js/main.9d9c5d0c.chunk.js.map",
     "runtime-main.js": "/dat-stream-deck-configurator/static/js/runtime-main.768e34d0.js",
     "runtime-main.js.map": "/dat-stream-deck-configurator/static/js/runtime-main.768e34d0.js.map",
     "static/js/2.3711d4e7.chunk.js": "/dat-stream-deck-configurator/static/js/2.3711d4e7.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.6334a38e.chunk.js": "/dat-stream-deck-configurator/static/js/3.6334a38e.chunk.js",
     "static/js/3.6334a38e.chunk.js.map": "/dat-stream-deck-configurator/static/js/3.6334a38e.chunk.js.map",
     "index.html": "/dat-stream-deck-configurator/index.html",
-    "static/css/main.13c347c5.chunk.css.map": "/dat-stream-deck-configurator/static/css/main.13c347c5.chunk.css.map",
+    "static/css/main.db710410.chunk.css.map": "/dat-stream-deck-configurator/static/css/main.db710410.chunk.css.map",
     "static/js/2.3711d4e7.chunk.js.LICENSE.txt": "/dat-stream-deck-configurator/static/js/2.3711d4e7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.768e34d0.js",
     "static/js/2.3711d4e7.chunk.js",
-    "static/css/main.13c347c5.chunk.css",
-    "static/js/main.2d33c041.chunk.js"
+    "static/css/main.db710410.chunk.css",
+    "static/js/main.9d9c5d0c.chunk.js"
   ]
 }
