@@ -41,8 +41,6 @@ function App() {
 
   const removeKey = () => null
 
-  console.log(config)
-
   return (
     <div>
       <Header />
