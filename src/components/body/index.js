@@ -4,13 +4,25 @@ import States from './states'
 import Keyboard from './keyboard'
 import Selected from './selected'
 
-function Body() {
+function Body({
+  states,
+  selectedState,
+  setSelectedState,
+  addState,
+  removeState,
+  keys,
+  selectedKey,
+  setSelectedKey,
+  addKey,
+  modifyKey,
+  removeKey
+}) {
   return (
     <div className="body">
       <div className="body-container">
-        <States />
-        <Keyboard />
-        <Selected />
+        <States states={states} selectedState={selectedState} setSelectedState={setSelectedState} addState={addState} removeState={removeState} />
+        <Keyboard keys={keys} selectedState={selectedState} selectedKey={selectedKey} setSelectedKey={setSelectedKey} />
+        <Selected selectedKey={selectedKey} addKey={addKey} modifyKey={modifyKey} removeKey={removeKey} />
       </div>
     </div>
   )

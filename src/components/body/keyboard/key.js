@@ -7,11 +7,15 @@ function Key({
   keyData,
   keys,
   selectedState,
+  selectedKey,
   setSelectedKey
 }) {
 
   return (
-    <div className={`key${special ? ` ${special}` : ''}`}>
+    <div
+      className={`key${selectedKey && label === selectedKey.label ? ' key-selected' : ''}${special ? ` ${special}` : ''}`}
+      onClick={() => setSelectedKey({label, keyData})}
+    >
       <div className="key-label">
         {label}
       </div>

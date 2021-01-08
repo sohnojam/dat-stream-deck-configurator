@@ -22,6 +22,10 @@
   box-shadow: 0 0 3px 0px rgba(230, 230, 230, 0.5);
 }
 
+.key-selected {
+  background-color: #505050;
+}
+
 .key-label {
   position: relative;
   top: 3px;
@@ -39,10 +43,10 @@
 }
 
 .key-state-circle {
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  margin: 1px;
+  width: 5px;
+  height: 5px;
+  border-radius: 2.5px;
+  margin: 1.5px;
 }
 
 .back {
