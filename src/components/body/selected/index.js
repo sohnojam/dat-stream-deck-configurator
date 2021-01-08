@@ -1,9 +1,10 @@
 import React from 'react'
+import './selected.css'
 
 function Selected() {
 
   return (
-    <div style={{height: 50, width: '100%', backgroundColor:'#252525', color:'red'}}>
+    <div className='selected-container'>
       Information about the selected key will go here
     </div>
   )

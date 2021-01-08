@@ -1,9 +1,10 @@
 import React from 'react'
+import './states.css'
 
 function States() {
 
   return (
-    <div style={{height: 50, width: '100%', backgroundColor:'#252525', color:'red'}}>
+    <div className='states-container'>
       State management and New/Load/Save buttons will go here
     </div>
   )
