@@ -5,16 +5,20 @@ function formatKeys(config) {
       const peKey = keys.findIndex(cKey => cKey.label === key.label)
       if (peKey !== -1) {
         keys[peKey].states.push({
-          name: state.name,
-          color: state.color
+          state: state.name,
+          color: state.color,
+          name: key.name,
+          actions: key.actions
         })
       } else {
         keys.push({
           ...key,
           states: [
             {
-              name: state.name,
-              color: state.color
+              state: state.name,
+              color: state.color,
+              name: key.name,
+              actions: key.actions
             }
           ]
         })

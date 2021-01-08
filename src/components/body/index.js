@@ -13,6 +13,7 @@ function Body({
   removeState,
   keys,
   selectedKey,
+  selectedKeyStates,
   setSelectedKey,
   addKey,
   modifyKey,
@@ -38,7 +39,9 @@ function Body({
         />
 
         <Selected
+          selectedState={selectedState}
           selectedKey={selectedKey}
+          selectedKeyStates={selectedKeyStates}
           addKey={addKey}
           modifyKey={modifyKey}
           removeKey={removeKey}

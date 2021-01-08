@@ -41,6 +41,19 @@ function App() {
 
   const removeKey = () => null
 
+  const states = formatStates(config)
+  const keys = formatKeys(config)
+
+  const keyStates = (keys, key) => {
+    if (key && key.label) {
+      const fKey = keys.find(cKey => cKey.label === key.label)
+      if (fKey && fKey.states) {
+        return fKey.states
+      }
+    }
+    return []
+  }
+
   return (
     <div>
       <Header />
@@ -48,14 +61,15 @@ function App() {
         newConfig={newConfig}
         loadConfig={loadConfig}
         saveConfig={saveConfig}
-        states={formatStates(config)}
+        states={states}
         selectedState={selectedState}
         setSelectedState={setSelectedState}
         addState={addState}
         modifyState={modifyState}
         removeState={removeState}
-        keys={formatKeys(config)}
+        keys={keys}
         selectedKey={selectedKey}
+        selectedKeyStates={keyStates(keys, selectedKey)}
         setSelectedKey={setSelectedKeyHandler}
         addKey={addKey}
         modifyKey={modifyKey}
