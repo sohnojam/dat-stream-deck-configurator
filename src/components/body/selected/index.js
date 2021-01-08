@@ -24,7 +24,7 @@ function Selected({
           />
         :
           <div className="selected-assignments-container">
-            {selectedKeyStates.filter(state => !selectedState || state.state === selectedState).map((state, index) => (
+            {selectedKeyStates.map((state, index) => (
               <KeyAssignment
                 key={`assign${index}`}
                 selectedKey={selectedKey}
