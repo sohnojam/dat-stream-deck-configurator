@@ -11,22 +11,22 @@
 
 .key {
   grid-column: span 5;
-  background-color: #d0d0d0;
-  color: #202020;
+  background-color: #323232;
+  box-shadow: 0 0 3px 0px #080808;
   border-radius: 4px;
   transition: all .25s ease-in-out;
 }
 .key:hover {
-  background-color: #a0a0a0;
+  background-color: #404040;
   cursor: pointer;
-  box-shadow: 0 0 3px 0px rgba(230, 230, 230, 0.8);
+  box-shadow: 0 0 3px 0px rgba(230, 230, 230, 0.5);
 }
 
 .key-label {
   position: relative;
   top: 3px;
   left: 5px;
-  color: #404040;
+  color: #808080;
   font-family: sans-serif;
   font-size: 11px;
 }

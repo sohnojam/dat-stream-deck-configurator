@@ -4,7 +4,8 @@
   top: 0;
   right: 0;
   height: 100px;
-  background-color: #c0c0c0;
+  background-color: #323232;
+  box-shadow: 0 0 10px 0px #080808;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +35,7 @@
 .header-nametag-line1 {
   font-family: sans-serif;
   font-size: 30px;
-  color: #202020;
+  color: #a0a0a0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +44,7 @@
 .header-nametag-line2 {
   font-family: sans-serif;
   font-size: 40px;
-  color: #202020;
+  color: #a0a0a0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,12 +66,12 @@
   padding: 15px 0;
   font-family: sans-serif;
   font-size: 20px;
-  color: #404040;
+  color: #808080;
 }
 
 .header-versiontag-line2 {
   padding: 15px 0;
   font-family: sans-serif;
   font-size: 15px;
-  color: #404040;
+  color: #808080;
 }

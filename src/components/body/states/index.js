@@ -3,7 +3,7 @@ import React from 'react'
 function States() {
 
   return (
-    <div style={{height: 50, width: '100%', backgroundColor:'#d0d0d0', color:'red'}}>
+    <div style={{height: 50, width: '100%', backgroundColor:'#252525', color:'red'}}>
       State management and New/Load/Save buttons will go here
     </div>
   )
