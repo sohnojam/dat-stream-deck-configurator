@@ -35,11 +35,38 @@ function App() {
     }
   }
 
-  const addKey = () => null
+  const addKey = (stateName, selectedKey, data) => {
+    const newConfig = Object.assign({}, config)
+    const stateIndex = newConfig.states.findIndex(state => state.name === stateName)
+    newConfig.states[stateIndex].keys.push({
+      label: selectedKey.label,
+      keyData: selectedKey.keyData,
+      name: data.name,
+      actions: data.actions
+    })
+    setConfig(newConfig)
+  }
 
-  const modifyKey = () => null
+  const modifyKey = (stateName, selectedKey, data) => {
+    const newConfig = Object.assign({}, config)
+    const stateIndex = newConfig.states.findIndex(state => state.name === stateName)
+    const keyIndex = newConfig.states[stateIndex].keys.findIndex(key => key.label === selectedKey.label)
+    newConfig.states[stateIndex].keys[keyIndex] = {
+      label: selectedKey.label,
+      keyData: selectedKey.keyData,
+      name: data.name,
+      actions: data.actions
+    }
+    setConfig(newConfig)
+  }
 
-  const removeKey = () => null
+  const removeKey = (stateName, selectedKey) => {
+    const newConfig = Object.assign({}, config)
+    const stateIndex = newConfig.states.findIndex(state => state.name === stateName)
+    const keyIndex = newConfig.states[stateIndex].keys.findIndex(key => key.label === selectedKey.label)
+    newConfig.states[stateIndex].keys.splice(keyIndex, 1)
+    setConfig(newConfig)
+  }
 
   const states = formatStates(config)
   const keys = formatKeys(config)

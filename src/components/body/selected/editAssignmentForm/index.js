@@ -42,9 +42,30 @@ function EditAssignmentForm({
     )
   }
 
-  const addAction = () => null
+  const addAction = (action) => {
+    setActions([...actions, action])
+    setCreatingAction(false)
+  }
 
-  const removeAction = () => null
+  const removeAction = (index) => {
+    const newActions = [...actions]
+    newActions.splice(index, 1)
+    setActions(newActions)
+  }
+
+  const handleSaveKey = () => {
+    if (currentAssignment) {
+      modifyKey(state, selectedKey, {name, state, color, actions})
+    } else {
+      addKey(state, selectedKey, {name, state, color, actions})
+    }
+    cancelEditAssignment()
+  }
+
+  const handleRemoveKey = () => {
+    removeKey(state, selectedKey)
+    cancelEditAssignment()
+  }
 
   return (
     <div className="edit-assignment-form">
@@ -90,6 +111,24 @@ function EditAssignmentForm({
             removeAction={removeAction}
           />
         }
+      </div>
+      <div className="edit-assignment-form-footer">
+        <div
+          className="edit-assignment-form-footer-button"
+          onClick={() => handleSaveKey()}
+        >
+          <span>
+            Save
+          </span>
+        </div>
+        <div
+          className="edit-assignment-form-footer-remove"
+          onClick={() => handleRemoveKey()}
+        >
+          <span>
+            Delete
+          </span>
+        </div>
       </div>
     </div>
   )

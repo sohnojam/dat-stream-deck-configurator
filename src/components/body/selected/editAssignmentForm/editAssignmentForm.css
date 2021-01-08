@@ -42,6 +42,56 @@
   box-shadow: 0 0 5px 0 #803232;
 }
 
+.edit-assignment-form-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.edit-assignment-form-footer-button {
+  margin: 10px 15px;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #85e282;
+  box-shadow: 0 0 3px 0 #46aa43;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #080808;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+.edit-assignment-form-footer-button:hover {
+  background-color: #46aa43;
+  box-shadow: 0 0 5px 0 #46aa43;
+}
+
+.edit-assignment-form-footer-remove {
+  margin: 10px 15px;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #d25050;
+  box-shadow: 0 0 3px 0 #803232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #080808;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+.edit-assignment-form-footer-remove:hover {
+  background-color: #803232;
+  box-shadow: 0 0 5px 0 #803232;
+}
+
 .edit-assignment-form-body {
   width: 100%;
   min-height: 50px;
@@ -67,7 +117,7 @@
   margin: 0 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
@@ -132,7 +182,7 @@
 }
 
 .edit-assignment-action-list-bottom {
-  margin-top: 10px;
+  margin: 10px 0;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -159,4 +209,55 @@
 .edit-assignment-action-list-button:hover {
   background-color: #5555bd;
   box-shadow: 0 0 5px 0 #5555bd;
+}
+
+.edit-assignment-create-bottom {
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.edit-assignment-create-button {
+  margin: 10px 15px;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #85e282;
+  box-shadow: 0 0 3px 0 #46aa43;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #080808;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+.edit-assignment-create-button:hover {
+  background-color: #46aa43;
+  box-shadow: 0 0 5px 0 #46aa43;
+}
+
+.edit-assignment-create-cancel {
+  margin: 10px 15px;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #d25050;
+  box-shadow: 0 0 3px 0 #803232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #080808;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+.edit-assignment-create-cancel:hover {
+  background-color: #803232;
+  box-shadow: 0 0 5px 0 #803232;
 }

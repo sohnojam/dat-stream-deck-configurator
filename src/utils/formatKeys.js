@@ -8,7 +8,8 @@ function formatKeys(config) {
           state: state.name,
           color: state.color,
           name: key.name,
-          actions: key.actions
+          actions: key.actions,
+          keyData: key.keyData
         })
       } else {
         keys.push({
@@ -18,7 +19,8 @@ function formatKeys(config) {
               state: state.name,
               color: state.color,
               name: key.name,
-              actions: key.actions
+              actions: key.actions,
+              keyData: key.keyData
             }
           ]
         })
