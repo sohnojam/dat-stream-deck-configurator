@@ -40,9 +40,14 @@ function Selected({
       {selectedKey ? 
         isEditing ?
           <EditKeyAssignment
+            states={states}
+            selectedState={selectedState}
             selectedKey={isEditing.selectedKey}
             currentAssignment={isEditing.currentAssignment}
             cancelEditAssignment={cancelEditAssignment}
+            addKey={addKey}
+            modifyKey={modifyKey}
+            removeKey={removeKey}
           />
         :
           <div className="selected-assignments-container">
@@ -55,7 +60,7 @@ function Selected({
               />
             ))}
             <NewKeyAssignment
-              newAssignment={() => editAssignment(selectedKey, {actions: [], name: '', state: null, color: ''})}
+              newAssignment={() => editAssignment(selectedKey, null)}
             />
           </div>
       :
