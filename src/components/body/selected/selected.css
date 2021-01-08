@@ -12,8 +12,9 @@
 }
 
 .selected-noselection {
-  width: 800px;
+  width: 100%;
   height: 100px;
+  margin: 0 9px;
   border-radius: 15px;
   background-color: #323232;
   box-shadow: 0 0 3px 0 #080808;
@@ -28,7 +29,7 @@
 .selected-assignments-container {
   width: 100%;
   min-height: 100px;
-  margin: 0 5px;
+  margin: 0 9px;
   display: grid;
   grid-template-columns: repeat(3, 32.5%);
   justify-content: space-between;
@@ -42,7 +43,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   background-color: #323232;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 0 3px 0 #080808;
   transition: all .25s ease-in-out;
 }
@@ -50,6 +51,60 @@
   background-color: #404040;
   cursor: pointer;
   box-shadow: 0 0 5px 0 rgba(230, 230, 230, 0.5);
+}
+
+.selected-assignment-header {
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.selected-assignment-header-circle {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.selected-assignment-header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.selected-assignment-header-text-line1 {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.selected-assignment-header-text-line2 {
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.selected-assignment-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 5px 15px;
+}
+
+.selected-assignment-actions-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3px 0;
+}
+
+.selected-assignment-actions-type {
+  margin-right: 5px;
+  font-family: sans-serif;
+  font-size: 18px;
 }
 
 .selected-newassignment-container {
@@ -60,7 +115,7 @@
   justify-content: center;
   align-items: center;
   background-color: #323232;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 0 3px 0 #080808;
   font-family: sans-serif;
   font-size: 30px;

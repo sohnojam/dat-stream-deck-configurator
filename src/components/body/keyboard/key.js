@@ -15,7 +15,7 @@ function Key({
   let states = []
   if (key) {
     if (selectedState) {
-      states = key.states.filter(state => state.name === selectedState)
+      states = key.states.filter(state => state.state === selectedState)
     } else {
       states = key.states
     }

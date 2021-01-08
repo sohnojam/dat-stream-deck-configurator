@@ -14,8 +14,6 @@ function Selected({
   removeKey
 }) {
 
-  console.log({selectedKey})
-
   const [isEditing, setIsEditing] = useState(null)
 
   return (
@@ -26,7 +24,7 @@ function Selected({
           />
         :
           <div className="selected-assignments-container">
-            {selectedKeyStates.map((state, index) => (
+            {selectedKeyStates.filter(state => !selectedState || state.state === selectedState).map((state, index) => (
               <KeyAssignment
                 key={`assign${index}`}
                 selectedKey={selectedKey}
