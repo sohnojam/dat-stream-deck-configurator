@@ -6,7 +6,8 @@ function EditKeyAssignment({
 }) {
 
   return (
-    <div />
+    <div className="selected-editassignment-container">
+    </div>
   )
 
 }

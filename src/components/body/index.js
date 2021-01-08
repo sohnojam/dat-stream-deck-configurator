@@ -39,6 +39,7 @@ function Body({
         />
 
         <Selected
+          states={states}
           selectedState={selectedState}
           selectedKey={selectedKey}
           selectedKeyStates={selectedKeyStates}

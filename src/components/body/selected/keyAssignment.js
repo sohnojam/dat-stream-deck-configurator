@@ -3,11 +3,15 @@ import './selected.css'
 
 function KeyAssignment({
   selectedKey,
-  assignment
+  assignment,
+  editAssignment
 }) {
 
   return (
-    <div className="selected-assignment-container">
+    <div
+      className="selected-assignment-container"
+      onClick={() => editAssignment()}
+    >
       <div className="selected-assignment-header">
         <div 
           className="selected-assignment-header-circle" 
