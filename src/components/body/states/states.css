@@ -6,7 +6,7 @@
   background-color: #252525;
   border-radius: 15px;
   padding: 5px;
-  box-shadow: 0 0 5px 1px #080808;
+  box-shadow: 0 0 5px 0 #080808;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
