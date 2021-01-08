@@ -7,7 +7,7 @@ const initialConfig = {
   states: [
     {
       name: 'init',
-      color: '#000000',
+      color: '#ffffff',
       keys: [
         {
           label: 'C',
@@ -34,7 +34,7 @@ const initialConfig = {
             ch: 'x'
           },
           name: 'Exit',
-          action: [
+          actions: [
             {
               type: 'exit'
             }

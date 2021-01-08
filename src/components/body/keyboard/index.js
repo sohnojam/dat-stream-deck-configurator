@@ -9,7 +9,6 @@ function Keyboard({
   selectedKey,
   setSelectedKey
 }) {
-
   return (
     <div className="keyboard">
       <Key label="Esc" keyData={{key: {name: 'escape'}}} keys={keys} selectedState={selectedState} selectedKey={selectedKey} setSelectedKey={setSelectedKey} />

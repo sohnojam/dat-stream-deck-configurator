@@ -11,6 +11,16 @@ function Key({
   setSelectedKey
 }) {
 
+  const key = keys.find(cKey => cKey.label === label)
+  let states = []
+  if (key) {
+    if (selectedState) {
+      states = key.states.filter(state => state.name === selectedState)
+    } else {
+      states = key.states
+    }
+  }
+
   return (
     <div
       className={`key${selectedKey && label === selectedKey.label ? ' key-selected' : ''}${special ? ` ${special}` : ''}`}
@@ -20,6 +30,13 @@ function Key({
         {label}
       </div>
       <div className="key-state-container">
+        {key ?
+          states.map((state, index) => (
+            <div key={`key${label}s${index}`} className="key-state-circle" style={{backgroundColor: state.color}} />
+          ))
+        :
+          null
+        }
       </div>
     </div>
   )

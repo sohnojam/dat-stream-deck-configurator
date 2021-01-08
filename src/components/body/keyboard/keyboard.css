@@ -30,7 +30,7 @@
   position: relative;
   top: 3px;
   left: 5px;
-  color: #808080;
+  color: #a0a0a0;
   font-family: sans-serif;
   font-size: 11px;
 }
@@ -47,6 +47,7 @@
   height: 5px;
   border-radius: 2.5px;
   margin: 1.5px;
+  box-shadow: 0 0 3px 1px #080808;
 }
 
 .back {
