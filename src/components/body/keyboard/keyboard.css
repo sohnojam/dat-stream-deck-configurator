@@ -12,14 +12,14 @@
 .key {
   grid-column: span 5;
   background-color: #323232;
-  box-shadow: 0 0 3px 0px #080808;
+  box-shadow: 0 0 2px 1px #080808;
   border-radius: 4px;
   transition: all .25s ease-in-out;
 }
 .key:hover {
   background-color: #404040;
   cursor: pointer;
-  box-shadow: 0 0 3px 0px rgba(230, 230, 230, 0.5);
+  box-shadow: 0 0 5px 0px rgba(230, 230, 230, 0.5);
 }
 
 .key-selected {
@@ -47,7 +47,6 @@
   height: 5px;
   border-radius: 2.5px;
   margin: 1.5px;
-  box-shadow: 0 0 3px 1px #080808;
 }
 
 .back {

@@ -32,7 +32,14 @@ function Key({
       <div className="key-state-container">
         {key ?
           states.map((state, index) => (
-            <div key={`key${label}s${index}`} className="key-state-circle" style={{backgroundColor: state.color}} />
+            <div
+              key={`key${label}s${index}`}
+              className="key-state-circle"
+              style={{
+                backgroundColor: state.color || '#000000',
+                boxShadow: `0 0 3px 0 ${state.color || '#000000'}`
+              }}
+            />
           ))
         :
           null
