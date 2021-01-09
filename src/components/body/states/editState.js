@@ -3,6 +3,7 @@ import './states.css'
 
 function EditState({
   isEditing,
+  newState,
   name,
   onChangeName,
   color,
@@ -25,6 +26,7 @@ function EditState({
             <span>Cancel</span>
           </div>
         </div>
+        <
       </div>
     </div>
   )

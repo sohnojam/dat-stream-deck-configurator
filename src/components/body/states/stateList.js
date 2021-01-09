@@ -5,7 +5,7 @@ function StateList({
   states,
   selectedState,
   setSelectedState,
-  modifyState,
+  setIsEditing,
   removeState
 }) {
 
@@ -15,7 +15,7 @@ function StateList({
         <div
           key={`state${index}`}
           className={`states-list-item${state.name === selectedState ? ' states-list-item-selected' : ''}`}
-          onClick={() => setSelectedState(state.name)}
+          onClick={() => setSelectedState(selectedState === state.name ? null : state.name)}
         >
           <div className="states-list-item-label">
             <div
@@ -37,6 +37,20 @@ function StateList({
           </div>
         </div>
       ))}
+      <div className="states-list-bottom">
+        <div
+          className="states-list-button"
+          onClick={() => setIsEditing(true)}
+        >
+          <span>
+            {selectedState ?
+              'Edit state'
+            :
+              'New state'
+            }
+          </span>
+        </div>
+      </div>
     </div>
   )
 

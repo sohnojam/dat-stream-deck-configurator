@@ -16,7 +16,7 @@ function States({
   removeState
 }) {
 
-  const [isEditing, setIsEditing] = useState(true)
+  const [isEditing, setIsEditing] = useState(false)
 
   const [editName, setEditName] = useState(
     selectedState ?
@@ -62,11 +62,6 @@ function States({
     }
   }
 
-  const handleModifyState = (stateName) => {
-    setSelectedState(stateName)
-    setIsEditing(true)
-  }
-
   const handleRemoveState = (stateIndex) => {
     const confirm = window.confirm('This will permanently delete the state. Any Switch State actions pointing to this state will cease to work. Are you sure you want to do this?')
     if (confirm) {
@@ -97,7 +92,7 @@ function States({
         states={states}
         selectedState={selectedState}
         setSelectedState={setSelectedState}
-        modifyState={handleModifyState}
+        setIsEditing={setIsEditing}
         removeState={handleRemoveState}
       />
     </div>
