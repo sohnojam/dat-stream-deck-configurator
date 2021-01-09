@@ -31,7 +31,8 @@
 .selected-assignments-container {
   width: 100%;
   min-height: 100px;
-  margin: 0 9px;
+  margin: 9px 9px;
+  grid-row-gap: 9px;
   display: grid;
   grid-template-columns: repeat(3, 32.5%);
   justify-content: space-between;

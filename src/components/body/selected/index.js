@@ -35,12 +35,16 @@ function Selected({
     setIsEditing(null)
   }
 
+  const availableStates = states.filter(state => (
+    !selectedKeyStates.map(state => state.state).includes(state.name)
+  ))
+
   return (
     <div className="selected-container">
       {selectedKey ? 
         isEditing ?
           <EditKeyAssignment
-            states={states}
+            states={availableStates}
             selectedState={selectedState}
             selectedKey={isEditing.selectedKey}
             currentAssignment={isEditing.currentAssignment}

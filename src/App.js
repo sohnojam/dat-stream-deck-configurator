@@ -29,6 +29,7 @@ function App() {
       keys: []
     })
     setConfig(newConfig)
+    setConfigModified(true)
   }
 
   const modifyState = (stateName, state) => {
@@ -40,12 +41,14 @@ function App() {
       keys: newConfig.states[stateIndex].keys 
     }
     setConfig(newConfig)
+    setConfigModified(true)
   }
 
   const removeState = (stateIndex) => {
     const newConfig = Object.assign({}, config)
     newConfig.states.splice(stateIndex, 1)
     setConfig(newConfig)
+    setConfigModified(true)
   }
 
   const setSelectedKeyHandler = (key) => {
@@ -66,6 +69,7 @@ function App() {
       actions: data.actions
     })
     setConfig(newConfig)
+    setConfigModified(true)
   }
 
   const modifyKey = (stateName, selectedKey, data) => {
@@ -79,6 +83,7 @@ function App() {
       actions: data.actions
     }
     setConfig(newConfig)
+    setConfigModified(true)
   }
 
   const removeKey = (stateName, selectedKey) => {
@@ -87,6 +92,7 @@ function App() {
     const keyIndex = newConfig.states[stateIndex].keys.findIndex(key => key.label === selectedKey.label)
     newConfig.states[stateIndex].keys.splice(keyIndex, 1)
     setConfig(newConfig)
+    setConfigModified(true)
   }
 
   const states = formatStates(config)
