@@ -26,7 +26,6 @@ function EditState({
             <span>Cancel</span>
           </div>
         </div>
-        <
       </div>
     </div>
   )
