@@ -5,6 +5,9 @@ import Keyboard from './keyboard'
 import Selected from './selected'
 
 function Body({
+  newConfig,
+  loadConfig,
+  saveConfig,
   states,
   selectedState,
   setSelectedState,
@@ -23,6 +26,9 @@ function Body({
     <div className="body">
       <div className="body-container">
         <States
+          newConfig={newConfig}
+          loadConfig={loadConfig}
+          saveConfig={saveConfig}
           states={states}
           selectedState={selectedState}
           setSelectedState={setSelectedState}

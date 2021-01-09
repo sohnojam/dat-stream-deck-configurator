@@ -21,11 +21,32 @@ function App() {
 
   const saveConfig = () => null
   
-  const addState = () => null
+  const addState = (state) => {
+    const newConfig = Object.assign({}, config)
+    newConfig.states.push({
+      name: state.name,
+      color: state.color,
+      keys: []
+    })
+    setConfig(newConfig)
+  }
 
-  const modifyState = () => null
+  const modifyState = (stateName, state) => {
+    const newConfig = Object.assign({}, config)
+    const stateIndex = newConfig.states.findIndex(state => state.name === stateName)
+    newConfig.states[stateIndex] = {
+      name: state.name,
+      color: state.color,
+      keys: newConfig.states[stateIndex].keys 
+    }
+    setConfig(newConfig)
+  }
 
-  const removeState = () => null
+  const removeState = (stateIndex) => {
+    const newConfig = Object.assign({}, config)
+    newConfig.states.splice(stateIndex, 1)
+    setConfig(newConfig)
+  }
 
   const setSelectedKeyHandler = (key) => {
     if (shallowCompare(key, selectedKey)) {

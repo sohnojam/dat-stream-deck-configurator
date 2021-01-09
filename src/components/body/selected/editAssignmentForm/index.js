@@ -55,16 +55,23 @@ function EditAssignmentForm({
 
   const handleSaveKey = () => {
     if (currentAssignment) {
-      modifyKey(state, selectedKey, {name, state, color, actions})
+      const confirm = window.confirm('This will overwrite the previous assignment to this key on this state. Are you sure you want to do this?')
+      if (confirm) {
+        modifyKey(state, selectedKey, {name, state, color, actions})
+        cancelEditAssignment()
+      }
     } else {
       addKey(state, selectedKey, {name, state, color, actions})
+      cancelEditAssignment()
     }
-    cancelEditAssignment()
   }
 
   const handleRemoveKey = () => {
-    removeKey(state, selectedKey)
-    cancelEditAssignment()
+    const confirm = window.confirm('This will permanently delete the assignment to this key on this state. Are you sure you want to do this?')
+    if (confirm) {
+      removeKey(state, selectedKey)
+      cancelEditAssignment()
+    }
   }
 
   return (
@@ -82,7 +89,8 @@ function EditAssignmentForm({
         </span>
         <div
           className="edit-assignment-form-header-cancel"
-          onClick={() => cancelEditAssignment()}
+          onClick={() => window.confirm('This will discard any changes made to the assignment. Are you sure you want to do this?')
+            && cancelEditAssignment()}
         >
           <span>
             Cancel

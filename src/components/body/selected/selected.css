@@ -1,12 +1,13 @@
 .selected-container {
   min-height: 130px;
-  width: 91%;
+  width: 95%;
   margin-top: 5px;
-  margin-bottom: 200px;
+  margin-bottom: 400px;
   background-color: #252525;
   border-radius: 25px;
   padding: 5px;
   box-shadow: 0 0 5px 0 #080808;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,7 +134,7 @@
 .selected-editassignment-container {
   width: 100%;
   min-height: 100px;
-  margin: 0 9px;
+  margin: 9px 9px;
   border-radius: 15px;
   background-color: #323232;
   box-shadow: 0 0 3px 0 #080808;
