@@ -10,6 +10,7 @@ function States({
   newConfig,
   loadConfig,
   saveConfig,
+  interfaceConfig,
   modifyInterface,
   states,
   selectedState,
@@ -21,15 +22,20 @@ function States({
 
   const [isEditing, setIsEditing] = useState(false)
 
-  const handleSaveState = () => {
+  const handleSaveInterface = (iface, startStateName) => {
+    modifyInterface(iface, startStateName)
+    setIsEditing('')
+  }
+
+  const handleSaveState = (state) => {
     if (selectedState) {
       const confirm = window.confirm('This will overwrite the state. Are you sure you want to do this?')
       if (confirm) {
-        modifyState(selectedState, {name: editName, color: editColor === 'custom' ? editCustomColor : editColor})
+        modifyState(selectedState, state)
         setIsEditing('')
       }
     } else {
-      addState({name: editName, color: editColor === 'custom' ? editCustomColor : editColor})
+      addState(state)
       setIsEditing('')
     }
   }
@@ -63,6 +69,9 @@ function States({
         />
       : isEditing === 'interface' ?
         <EditInterface
+          interfaceConfig={interfaceConfig}
+          states={states}
+          saveInterface={handleSaveInterface}
           cancel={() => window.confirm('This will discard any changes made to the interface. Are you sure you want to do this?')
             && setIsEditing('')}
         />

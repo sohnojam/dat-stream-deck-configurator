@@ -57,6 +57,7 @@ function App() {
     newConfig.states.splice(stateIndex, 1)
     setConfig(newConfig)
     setConfigModified(true)
+    setSelectedState(null)
   }
 
   const setSelectedKeyHandler = (key) => {
@@ -123,6 +124,7 @@ function App() {
         newConfig={newConfig}
         loadConfig={loadConfig}
         saveConfig={saveConfig}
+        interfaceConfig={{interface: config.interface, startStateName: config.startStateName}}
         modifyInterface={modifyInterface}
         states={states}
         selectedState={selectedState}

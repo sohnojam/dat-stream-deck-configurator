@@ -8,6 +8,8 @@ function Body({
   newConfig,
   loadConfig,
   saveConfig,
+  interfaceConfig,
+  modifyInterface,
   states,
   selectedState,
   setSelectedState,
@@ -29,6 +31,8 @@ function Body({
           newConfig={newConfig}
           loadConfig={loadConfig}
           saveConfig={saveConfig}
+          interfaceConfig={interfaceConfig}
+          modifyInterface={modifyInterface}
           states={states}
           selectedState={selectedState}
           setSelectedState={setSelectedState}

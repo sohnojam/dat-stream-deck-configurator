@@ -9,11 +9,12 @@
   box-sizing: border-box;
   box-shadow: 0 0 5px 0 #080808;
   display: grid;
-  grid-template-columns: repeat(3, auto);
-  grid-column-gap: 15px;
+  grid-template-columns: 22.5% 40% 32.5%;
+  grid-column-gap: 2.5%;
 }
 
 .states-c1 {
+  height: fit-content;
   background-color: #323232;
   margin: 9px 0;
   padding: 10px 0;
@@ -21,7 +22,7 @@
   box-shadow: 0 0 3px 0 #080808;
   display: flex;
   flex-direction: column;
-    justify-content: space-evenly;
+  justify-content: space-evenly;
   align-items: flex-start;
 }
 
@@ -117,7 +118,7 @@
 }
 
 .states-edit-form-input-text {
-  width: 100px;
+  width: 200px;
   margin: 5px 10px;
   padding: 2px 5px;
   border-radius: 5px;
@@ -127,7 +128,37 @@
   box-sizing: border-box;
 }
 
+.states-edit-form-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.states-edit-form-footer-button {
+  margin: 10px 15px;
+  width: 100px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: #85e282;
+  box-shadow: 0 0 3px 0 #46aa43;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #080808;
+  cursor: pointer;
+  transition: all .25s ease-in-out;
+}
+.states-edit-form-footer-button:hover {
+  background-color: #46aa43;
+  box-shadow: 0 0 5px 0 #46aa43;
+}
+
 .states-c3 {
+  height: fit-content;
   background-color: #323232;
   margin: 9px 0;
   border-radius: 15px;
