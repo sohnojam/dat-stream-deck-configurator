@@ -50,7 +50,7 @@ function App() {
     const element = document.createElement("a");
     const file = new Blob([JSON.stringify(config)], {type: 'text/plain'});
     element.href = URL.createObjectURL(file);
-    element.download = "myFile.json";
+    element.download = "dsdconfig.json";
     document.body.appendChild(element); // Required for this to work in FireFox
     element.click();
     setConfigModified(false)
