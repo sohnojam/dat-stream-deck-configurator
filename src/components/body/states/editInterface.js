@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import './states.css'
 
-function EditState({
-  states,
-  selectedState,
-  saveState,
+function EditInterface({
   cancel
 }) {
 
@@ -25,4 +22,4 @@ function EditState({
 
 }
 
-export default EditState
+export default EditInterface

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './states.css'
 import FileControl from './fileControl'
+import EditEmpty from './editEmpty'
+import EditInterface from './editInterface'
 import EditState from './editState'
 import StateList from './stateList'
 
@@ -8,6 +10,7 @@ function States({
   newConfig,
   loadConfig,
   saveConfig,
+  modifyInterface,
   states,
   selectedState,
   setSelectedState,
@@ -18,47 +21,16 @@ function States({
 
   const [isEditing, setIsEditing] = useState(false)
 
-  const [editName, setEditName] = useState(
-    selectedState ?
-      states.find(state => state.name === selectedState).name
-    : ''
-  )
-
-  const [editColor, setEditColor] = useState(
-    selectedState ?
-      'custom'
-    : ''
-  )
-
-  const [editCustomColor, setEditCustomColor] = useState(
-    selectedState ?
-      states.find(state => state.name === selectedState).color
-    : ''
-  )
-
-  const onChangeName = (value) => {
-    setEditName(value.toLowerCase())
-  }
-
-  const onChangeColor = (value) => {
-    setEditColor(value)
-  }
-
-  const onChangeCustomColor = (value) => {
-    setEditCustomColor(
-      value ? value[0] === '#' ? value : '#' + value : ''
-    )
-  }
-
   const handleSaveState = () => {
     if (selectedState) {
       const confirm = window.confirm('This will overwrite the state. Are you sure you want to do this?')
       if (confirm) {
         modifyState(selectedState, {name: editName, color: editColor === 'custom' ? editCustomColor : editColor})
-        setIsEditing(false)
+        setIsEditing('')
       }
     } else {
       addState({name: editName, color: editColor === 'custom' ? editCustomColor : editColor})
+      setIsEditing('')
     }
   }
 
@@ -75,24 +47,37 @@ function States({
         newConfig={newConfig}
         loadConfig={loadConfig}
         saveConfig={saveConfig}
+        editInterface={() => isEditing === 'state' ?
+            window.confirm('This will discard any changes made to the state. Are you sure you want to do this?') && setIsEditing('interface')
+          :
+            setIsEditing('interface')
+          }
       />
-      <EditState
-        isEditing={isEditing}
-        newState={!selectedState}
-        name={editName}
-        onChangeName={onChangeName}
-        color={editColor}
-        onChangeColor={onChangeColor}
-        customColor={editCustomColor}
-        onChangeCustomColor={onChangeCustomColor}
-        saveState={handleSaveState}
-        cancel={() => setIsEditing(false)}
-      />
+      {isEditing === 'state' ?
+        <EditState
+          states={states}
+          selectedState={selectedState}
+          saveState={handleSaveState}
+          cancel={() => window.confirm('This will discard any changes made to the state. Are you sure you want to do this?')
+            && setIsEditing('')}
+        />
+      : isEditing === 'interface' ?
+        <EditInterface
+          cancel={() => window.confirm('This will discard any changes made to the interface. Are you sure you want to do this?')
+            && setIsEditing('')}
+        />
+      :
+        <EditEmpty />
+      }
       <StateList
         states={states}
         selectedState={selectedState}
         setSelectedState={setSelectedState}
-        setIsEditing={setIsEditing}
+        editState={() => isEditing === 'interface' ?
+            window.confirm('This will discard any changes made to the interface. Are you sure you want to do this?') && setIsEditing('state')
+          :
+            setIsEditing('state')
+          }
         removeState={handleRemoveState}
       />
     </div>

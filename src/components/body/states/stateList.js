@@ -1,11 +1,12 @@
 import React from 'react'
+import EditState from './editState'
 import './states.css'
 
 function StateList({
   states,
   selectedState,
   setSelectedState,
-  setIsEditing,
+  editState,
   removeState
 }) {
 
@@ -40,7 +41,7 @@ function StateList({
       <div className="states-list-bottom">
         <div
           className="states-list-button"
-          onClick={() => setIsEditing(true)}
+          onClick={() => editState()}
         >
           <span>
             {selectedState ?

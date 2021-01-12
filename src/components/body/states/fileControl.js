@@ -4,7 +4,8 @@ import './states.css'
 function FileControl({
   newConfig,
   loadConfig,
-  saveConfig
+  saveConfig,
+  editInterface
 }) {
   return (
     <div className="states-c1">
@@ -30,6 +31,14 @@ function FileControl({
       >
         <span>
           Save config
+        </span>
+      </div>
+      <div
+        className="states-file-button"
+        onClick={() => editInterface()}
+      >
+        <span>
+          Edit interface
         </span>
       </div>
     </div>

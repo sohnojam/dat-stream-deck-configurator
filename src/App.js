@@ -20,6 +20,14 @@ function App() {
   const loadConfig = () => null
 
   const saveConfig = () => null
+
+  const modifyInterface = (iface, startStateName) => {
+    const newConfig = Object.assign({}, config)
+    newConfig.interface = iface
+    newConfig.startStateName = startStateName
+    setConfig(newConfig)
+    setConfigModified(true)
+  }
   
   const addState = (state) => {
     const newConfig = Object.assign({}, config)
@@ -115,6 +123,7 @@ function App() {
         newConfig={newConfig}
         loadConfig={loadConfig}
         saveConfig={saveConfig}
+        modifyInterface={modifyInterface}
         states={states}
         selectedState={selectedState}
         setSelectedState={setSelectedState}
