@@ -56,10 +56,10 @@ function App() {
     setConfigModified(false)
   }
 
-  const modifyInterface = (iface, startStateName) => {
+  const modifyInterface = (iface, controller) => {
     const newConfig = Object.assign({}, config)
     newConfig.interface = iface
-    newConfig.startStateName = startStateName
+    newConfig.controller = controller
     setConfig(newConfig)
     setConfigModified(true)
   }

@@ -22,8 +22,8 @@ function States({
 
   const [isEditing, setIsEditing] = useState(false)
 
-  const handleSaveInterface = (iface, startStateName) => {
-    modifyInterface(iface, startStateName)
+  const handleSaveInterface = (iface, controller) => {
+    modifyInterface(iface, controller)
     setIsEditing('')
   }
 

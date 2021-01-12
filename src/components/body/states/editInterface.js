@@ -108,7 +108,7 @@ function EditInterface({
       ),
       password: type === 'OBSS' ? password : undefined,
       token: type === 'SLOBS' ? token : undefined
-    }, startStateName)
+    }, {startStateName})
   }
 
   return (
