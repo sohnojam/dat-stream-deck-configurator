@@ -49,6 +49,10 @@
   box-shadow: 0 0 5px 0 #5555bd;
 }
 
+.states-file-input-hidden {
+  display: none;
+}
+
 .states-c2 {
   background-color: #323232;
   margin: 9px 0;

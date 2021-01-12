@@ -9,7 +9,7 @@ function EditInterface({
 }) {
 
   const [type, setType] = useState(
-    interfaceConfig && interfaceConfig.interface && interfaceConfig.interface.type || ''
+    (interfaceConfig && interfaceConfig.interface && interfaceConfig.interface.type) || ''
   )
 
   const [address, setAddress] = useState(
@@ -69,7 +69,7 @@ function EditInterface({
   )
 
   const [startStateName, setStartStateName] = useState(
-    interfaceConfig && interfaceConfig.startStateName || ''
+    (interfaceConfig && interfaceConfig.startStateName) || ''
   )
 
   const onChangeType = (value) => {

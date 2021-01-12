@@ -17,14 +17,19 @@ function FileControl({
           New config
         </span>
       </div>
-      <div
+      <label
         className="states-file-button"
-        onClick={() => loadConfig()}
       >
+        <input
+          className="states-file-input-hidden"
+          type="file"
+          accept="file_extension,.json"
+          onChange={e => loadConfig((e.target.files && e.target.files.length && e.target.files[0]) || null)}
+        />
         <span>
           Load config
         </span>
-      </div>
+      </label>
       <div
         className="states-file-button"
         onClick={() => saveConfig()}

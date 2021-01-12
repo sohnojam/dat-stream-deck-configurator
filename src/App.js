@@ -15,11 +15,46 @@ function App() {
   const [selectedState, setSelectedState] = useState(null)
   const [selectedKey, setSelectedKey] = useState(null)
 
-  const newConfig = () => null
+  const newConfig = () => {
+    if (configModified) {
+      window.confirm('There are unsaved changes in your configuration. Are you sure you want to do this?')
+      && window.location.reload()
+    } else {
+      window.location.reload()
+    }
+  }
 
-  const loadConfig = () => null
+  const loadConfigRead = (filePointer) => {
+    const fileReader = new FileReader()
+    fileReader.readAsText(filePointer, 'UTF-8')
+    fileReader.onload = (e) => {
+      try {
+        const newConfig = JSON.parse(e.target.result)
+        setConfig(newConfig)
+      } catch (e) {
+        console.error(e)
+      }
+    }
+  }
 
-  const saveConfig = () => null
+  const loadConfig = (filePointer) => {
+    if (configModified) {
+      window.confirm('There are unsaved changes in your configuration. Are you sure you want to do this?')
+      && loadConfigRead(filePointer)
+    } else {
+      loadConfigRead(filePointer)
+    }
+  }
+
+  const saveConfig = () => {
+    const element = document.createElement("a");
+    const file = new Blob([JSON.stringify(config)], {type: 'text/plain'});
+    element.href = URL.createObjectURL(file);
+    element.download = "myFile.json";
+    document.body.appendChild(element); // Required for this to work in FireFox
+    element.click();
+    setConfigModified(false)
+  }
 
   const modifyInterface = (iface, startStateName) => {
     const newConfig = Object.assign({}, config)
