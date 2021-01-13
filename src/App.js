@@ -159,7 +159,7 @@ function App() {
         newConfig={newConfig}
         loadConfig={loadConfig}
         saveConfig={saveConfig}
-        interfaceConfig={{interface: config.interface, startStateName: config.startStateName}}
+        interfaceConfig={{interface: config.interface, controller: config.controller}}
         modifyInterface={modifyInterface}
         states={states}
         selectedState={selectedState}

@@ -34,7 +34,7 @@ function FormBodyRightCreate({
         setInputs({
           type: 'setSourceMute',
           sourceName: '',
-          mute: false
+          mute: null
         })
         break
       }
@@ -43,7 +43,7 @@ function FormBodyRightCreate({
           type: 'setSourceVisibility',
           sceneName: '',
           sourceName: '',
-          visible: true
+          visible: ''
         })
         break
       }
@@ -92,7 +92,7 @@ function FormBodyRightCreate({
   return (
     <div className="edit-assignment-form-body-c2">
       {Object.keys(inputs).map((inputKey, index) => (
-        <React.Fragment>
+        <React.Fragment key={index}>
 
           {inputKey === 'type' ?
             <React.Fragment>
@@ -158,9 +158,9 @@ function FormBodyRightCreate({
                 onChange={(e) => setInputs({...inputs, mute: e.target.value})}
                 value={inputs[inputKey]}
               >
-                <option key='0' value={null} disabled>Select mute state</option>
-                <option key='1' value={true}>Muted</option>
-                <option key='2' value={false}>Unmuted</option>
+                <option key='0' value={''} disabled>Select mute state</option>
+                <option key='1' value={'true'}>Muted</option>
+                <option key='2' value={'false'}>Unmuted</option>
               </select>
             </React.Fragment>
 
@@ -172,9 +172,9 @@ function FormBodyRightCreate({
                 onChange={(e) => setInputs({...inputs, visible: e.target.value})}
                 value={inputs[inputKey]}
               >
-                <option key='0' value={null}>Select visible state</option>
-                <option key='1' value={true}>Visible</option>
-                <option key='2' value={false}>Invisible</option>
+                <option key='0' value={''}>Select visible state</option>
+                <option key='1' value={'true'}>Visible</option>
+                <option key='2' value={'false'}>Invisible</option>
               </select>
             </React.Fragment>
 

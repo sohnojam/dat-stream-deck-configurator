@@ -1,6 +1,6 @@
 const initialConfig = {
   controller: {
-    initStateName: 'init'
+    startStateName: 'init'
   },
   interface: {
   },
