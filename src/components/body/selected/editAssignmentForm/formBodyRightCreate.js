@@ -172,7 +172,7 @@ function FormBodyRightCreate({
                 onChange={(e) => setInputs({...inputs, visible: e.target.value})}
                 value={inputs[inputKey]}
               >
-                <option key='0' value={''}>Select visible state</option>
+                <option key='0' value={''} disabled>Select visible state</option>
                 <option key='1' value={'true'}>Visible</option>
                 <option key='2' value={'false'}>Invisible</option>
               </select>
