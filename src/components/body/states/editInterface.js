@@ -69,7 +69,7 @@ function EditInterface({
   )
 
   const [startStateName, setStartStateName] = useState(
-    (interfaceConfig && interfaceConfig.startStateName) || ''
+    (interfaceConfig && interfaceConfig.controller && interfaceConfig.controller.startStateName) || ''
   )
 
   const onChangeType = (value) => {
