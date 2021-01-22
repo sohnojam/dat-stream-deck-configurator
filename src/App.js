@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import ConfigUpdater from './utils/configUpdater'
+
 import initialConfig from './utils/initialConfig'
 import shallowCompare from './utils/shallowCompare'
 import formatKeys from './utils/formatKeys'
@@ -29,7 +31,8 @@ function App() {
     fileReader.readAsText(filePointer, 'UTF-8')
     fileReader.onload = (e) => {
       try {
-        const newConfig = JSON.parse(e.target.result)
+        const loadedConfig = JSON.parse(e.target.result)
+        const newConfig = ConfigUpdater.updateConfig(loadedConfig)
         setConfig(newConfig)
       } catch (e) {
         console.error(e)

@@ -6,7 +6,7 @@ function VersionTag() {
   return (
     <div className="header-versiontag-container">
       <div className="header-versiontag-line1">
-        <span>v. 0.1.0</span>
+        <span>v0.1.1</span>
       </div>
       <div className="header-versiontag-line2">
         <span>github.com/sohnojam</span>

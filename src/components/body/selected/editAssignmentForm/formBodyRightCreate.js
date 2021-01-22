@@ -86,6 +86,9 @@ function FormBodyRightCreate({
         })
         break
       }
+      default: {
+        break
+      }
     }
   }
 

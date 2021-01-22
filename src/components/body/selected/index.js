@@ -25,7 +25,7 @@ function Selected({
     ) {
       setIsEditing(null)
     }
-  })
+  }, [isEditing, selectedKey])
 
   const editAssignment = (selectedKey, currentAssignment) => {
     setIsEditing({selectedKey, currentAssignment})

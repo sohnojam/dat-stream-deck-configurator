@@ -1,5 +1,4 @@
 import React from 'react'
-import EditState from './editState'
 import './states.css'
 
 function StateList({
