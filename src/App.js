@@ -8,7 +8,6 @@ import formatKeys from './utils/formatKeys'
 import formatStates from './utils/formatStates'
 
 import Header from './components/header'
-import Body from './components/body'
 
 function App() {
 
@@ -158,6 +157,8 @@ function App() {
   return (
     <div>
       <Header />
+
+      {/*<Header />
       <Body
         newConfig={newConfig}
         loadConfig={loadConfig}
@@ -177,7 +178,7 @@ function App() {
         addKey={addKey}
         modifyKey={modifyKey}
         removeKey={removeKey}
-      />
+      />*/}
     </div>
   )
 }
