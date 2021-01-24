@@ -1,134 +1,71 @@
+//
+// Imports
+
+// Core
 import React from 'react'
 
 // Styles
 import { makeStyles } from '@material-ui/core/styles'
-import colors from '../../styles/colors'
 
-// Component
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import IconButton from '@material-ui/core/IconButton'
+// Mui Components
+import MuiAppBar from '@material-ui/core/AppBar'
+import MuiToolbar from '@material-ui/core/Toolbar'
+import MuiTypography from '@material-ui/core/Typography'
 
-// Drawer button
-import MenuIcon from '@material-ui/icons/Menu'
+//
+//
 
-// Title
-import Typography from '@material-ui/core/Typography'
-
-// File menu
-import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile'
-import Menu from '@material-ui/core/Menu'
-import MenuItem from '@material-ui/core/MenuItem'
-
+// Classes
 const useStyles = makeStyles((theme) => ({
-  header: {
-    backgroundColor: colors.secondary,
-    background: `linear-gradient(0deg, ${colors.primaryDark} 0%, ${colors.primary} 25%, ${colors.primary} 75%, ${colors.primaryLight} 100%)`
-  },
-  iconButton: {
-    color: colors.textSecondary
-  },
-  menu: {
-    backgroundColor: colors.backgroundAlt,
-    color: colors.text
+  root: {
+    zIndex: theme.zIndex.drawer + 1,
+    background: `linear-gradient(0deg, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 25%, ${theme.palette.primary.main} 75%, ${theme.palette.primary.light} 100%)`
   },
   title: {
     marginLeft: theme.spacing(2),
     flexGrow: 1,
-    color: colors.textSecondary
+    color: theme.palette.text
+  },
+  version: {
+    marginRight: theme.spacing(2),
+    flexGrow: 0,
+    color: theme.palette.text
   }
 }))
 
-function Header({
+//
+//
 
+// Component function
+function Header({
 }) {
 
   const classes = useStyles()
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const menuOpened = Boolean(anchorEl)
-
-  const handleOpenMenu = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
-
-  const handleCloseMenu = () => {
-    setAnchorEl(null)
-  }
-
-  console.log(colors, colors.primary)
 
   return (
-    <AppBar
-      className={classes.header}
+    <MuiAppBar
+      className={classes.root}
     >
-      <Toolbar>
+      <MuiToolbar>
 
-        <IconButton
-          className={classes.iconButton}
-          onClick={() => null}
-        >
-          <MenuIcon />
-        </IconButton>
-
-        <Typography
+        <MuiTypography
           className={classes.title}
           align="left"
           variant="h4"
         >
           dat-stream-deck Configurator
-        </Typography>
+        </MuiTypography>
 
-        <IconButton
-          className={classes.iconButton}
-          onClick={handleOpenMenu}
+        <MuiTypography
+          className={classes.version}
+          align="right"
+          variant="h6"
         >
-          <InsertDriveFileIcon />
-        </IconButton>
+          v0.2.0
+        </MuiTypography>
 
-        <Menu
-          anchorEl={anchorEl}
-          anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          keepMounted
-          transformOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          open={menuOpened}
-          onClose={handleCloseMenu}
-        >
-          <MenuItem
-          >
-            New Configuration
-          </MenuItem>
-
-          <MenuItem
-          >
-            Load Configuration
-          </MenuItem>
-
-          <MenuItem
-          >
-            Save Configuration
-          </MenuItem>
-
-          <MenuItem
-            disabled
-          >
-            v0.2.0
-          </MenuItem>
-
-          <MenuItem
-            onClick={() => window.location.assign('https://github.com/sohnojam/dat-stream-deck')}
-          >
-            dat-stream-deck
-          </MenuItem>
-        </Menu>
-
-      </Toolbar>
-    </AppBar>
+       </MuiToolbar>
+    </MuiAppBar>
   )
 }
 

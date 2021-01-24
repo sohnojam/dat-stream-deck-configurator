@@ -1,4 +1,4 @@
-const colors = {
+const Colors = {
   background: '#161616',
   backgroundAlt: '#242424',
   text: '#D8D8D8',
@@ -12,4 +12,4 @@ const colors = {
   textSecondary: '#242424'
 }
 
-export default colors
+export default Colors
