@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
   },
   drawerPaper: {
     width: 256,
-    backgroundColor: theme.palette.background.default
+    backgroundColor: theme.palette.background.paper
   },
   drawerContainer: {
     overflow: 'auto'
@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
 // Component
 function Drawer({
   selected,
-  onClick
+  onClick,
+  version
 }) {
 
   const classes = useStyles()
@@ -58,6 +59,7 @@ function Drawer({
           <List
             selected={selected}
             onClick={onClick}
+            version={version}
           />
 
         </div>

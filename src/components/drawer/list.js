@@ -32,7 +32,7 @@ import IconKeys from '@material-ui/icons/Keyboard'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    backgroundColor: theme.palette.background.default
+    backgroundColor: theme.palette.background.paper
   },
   icon: {
     color: theme.palette.text
@@ -46,6 +46,11 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1)
+  },
+  version: {
+    color: theme.palette.text.disabled,
+    marginLeft: theme.spacing(1),
+    marginTop: theme.spacing(1)
   }
 }))
 
@@ -53,7 +58,8 @@ const useStyles = makeStyles((theme) => ({
 // Component
 function List({
   selected,
-  onClick
+  onClick,
+  version
 }) {
 
   const classes = useStyles()
@@ -64,6 +70,8 @@ function List({
     setFileOpen(!fileOpen)
   }
 
+  //
+  // Render
   return (
   
     <MuiList
@@ -219,6 +227,13 @@ function List({
         <MuiListItemText
           className={classes.text}
           primary="Keys"
+        />
+      </MuiListItem>
+
+      <MuiListItem>
+        <MuiListItemText
+          className={classes.version}
+          primary={version}
         />
       </MuiListItem>
 

@@ -11,15 +11,24 @@ import Body from './components/body'
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
 //
-// Theme
+// Themes
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
     primary: {
-      main: "#F08000"
+      main: "#F08000",
+      contrastText: '#000000'
     },
     secondary: {
-      main: "#80F000"
+      main: "#80F000",
+      contrastText: '#000000'
+    },
+    text: {
+      primary: "#FFFFFF",
+      secondary: "rgba(255,255,255, 0.7)",
+      disabled: "rgba(255,255,255, 0.5)",
+      hint: "rgba(255,255,255, 0.5)",
+      icon: "rgba(255,255,255, 0.5)"
     }
   }
 })
@@ -28,13 +37,15 @@ const theme = createMuiTheme({
 // Component
 function App() {
 
-    return (
-      <ThemeProvider
-        theme={theme}
-      >
-        <Body />
-      </ThemeProvider>
-    )
+  return (
+    <ThemeProvider
+      theme={theme}
+    >
+      <Body
+        version="v0.2.0"
+      />
+    </ThemeProvider>
+  )
 }
 
 export default App

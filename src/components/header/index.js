@@ -13,35 +13,30 @@ import MuiToolbar from '@material-ui/core/Toolbar'
 import MuiTypography from '@material-ui/core/Typography'
 
 //
-//
-
 // Classes
 const useStyles = makeStyles((theme) => ({
   root: {
     zIndex: theme.zIndex.drawer + 1,
-    background: `linear-gradient(0deg, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 25%, ${theme.palette.primary.main} 75%, ${theme.palette.primary.light} 100%)`
+    backgroundColor: theme.palette.primary
   },
   title: {
     marginLeft: theme.spacing(2),
     flexGrow: 1,
-    color: theme.palette.text
+    color: theme.palette.primary.contrastText
   },
-  version: {
-    marginRight: theme.spacing(2),
-    flexGrow: 0,
-    color: theme.palette.text
+  icon: {
+    color: theme.palette.primary.contrastText
   }
 }))
 
 //
-//
-
-// Component function
-function Header({
-}) {
+// Component
+function Header() {
 
   const classes = useStyles()
 
+  //
+  // Render
   return (
     <MuiAppBar
       className={classes.root}
@@ -54,14 +49,6 @@ function Header({
           variant="h4"
         >
           dat-stream-deck Configurator
-        </MuiTypography>
-
-        <MuiTypography
-          className={classes.version}
-          align="right"
-          variant="h6"
-        >
-          v0.2.0
         </MuiTypography>
 
        </MuiToolbar>
