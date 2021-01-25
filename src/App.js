@@ -17,11 +17,27 @@ const theme = createMuiTheme({
     type: 'dark',
     primary: {
       main: "#F08000",
-      contrastText: '#000000'
+      contrastText: "#000000"
     },
     secondary: {
       main: "#80F000",
-      contrastText: '#000000'
+      contrastText: "#000000"
+    },
+    success: {
+      main: "#30F030",
+      contrastText: "#000000"
+    },
+    danger: {
+      main: "#F08030",
+      contrastText: "#000000"
+    },
+    failure: {
+      main: "#F03030",
+      contrastText: "#000000"
+    },
+    info: {
+      main: "#8080F0",
+      contrastText: "#000000"
     },
     text: {
       primary: "#FFFFFF",

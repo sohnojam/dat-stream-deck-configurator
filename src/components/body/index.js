@@ -7,6 +7,8 @@ import React from 'react'
 // Components
 import Header from '../header'
 import Drawer from '../drawer'
+import Home from '../home'
+import Interface from '../interface'
 
 // Styles
 import { makeStyles } from '@material-ui/core/styles'
@@ -21,6 +23,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex'
   },
+  page: {
+    paddingTop: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2)
+  }
 }))
 
 //
@@ -61,6 +69,9 @@ function Body({
         selected={screen}
         onClick={{
           home: handleScreenHome,
+          fileNew: () => null,
+          fileOpen: () => null,
+          fileSave: () => null,
           interface: handleScreenInterface,
           states: handleScreenStates,
           keys: handleScreenKeys
@@ -72,23 +83,31 @@ function Body({
 
         <MuiToolbar />
 
-        { screen === 'home' ?
+        <MuiContainer
+          className={classes.page}
+        >
 
-          null
+          { screen === 'home' ?
 
-        : screen === 'interface' ?
+            <Home
+            />
 
-          null
+          : screen === 'interface' ?
 
-        : screen === 'states' ?
+            <Interface
+            />
 
-          null
-        
-        : screen === 'keys' ?
+          : screen === 'states' ?
 
-          null
+            null
+          
+          : screen === 'keys' ?
 
-        : null }
+            null
+
+          : null }
+
+        </MuiContainer>
 
       </MuiContainer>
 

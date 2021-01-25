@@ -133,7 +133,7 @@ function List({
           <MuiListItem
             className={classes.nested}
             button
-            onClick={() => null}
+            onClick={onClick.fileNew}
           >
             <MuiListItemIcon
               className={classes.icon}
@@ -149,7 +149,7 @@ function List({
           <MuiListItem
             className={classes.nested}
             button
-            onClick={() => null}
+            onClick={onClick.fileOpen}
           >
             <MuiListItemIcon
               className={classes.icon}
@@ -165,7 +165,7 @@ function List({
           <MuiListItem
             className={classes.nested}
             button
-            onClick={() => null}
+            onClick={onClick.fileSave}
           >
             <MuiListItemIcon
               className={classes.icon}
