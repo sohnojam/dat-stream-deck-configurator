@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dat-stream-deck-configurator/static/css/main.20b63a1c.chunk.css",
-    "main.js": "/dat-stream-deck-configurator/static/js/main.3e901096.chunk.js",
-    "main.js.map": "/dat-stream-deck-configurator/static/js/main.3e901096.chunk.js.map",
+    "main.js": "/dat-stream-deck-configurator/static/js/main.807c9410.chunk.js",
+    "main.js.map": "/dat-stream-deck-configurator/static/js/main.807c9410.chunk.js.map",
     "runtime-main.js": "/dat-stream-deck-configurator/static/js/runtime-main.43cb72fc.js",
     "runtime-main.js.map": "/dat-stream-deck-configurator/static/js/runtime-main.43cb72fc.js.map",
     "static/js/2.49a7d1e2.chunk.js": "/dat-stream-deck-configurator/static/js/2.49a7d1e2.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.43cb72fc.js",
     "static/js/2.49a7d1e2.chunk.js",
     "static/css/main.20b63a1c.chunk.css",
-    "static/js/main.3e901096.chunk.js"
+    "static/js/main.807c9410.chunk.js"
   ]
 }
