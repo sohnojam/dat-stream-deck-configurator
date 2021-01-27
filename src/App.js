@@ -32,8 +32,14 @@ function App() {
     fileReader.onload = (e) => {
       try {
         const loadedConfig = JSON.parse(e.target.result)
-        const newConfig = ConfigUpdater.updateConfig(loadedConfig)
-        setConfig(newConfig)
+        if (ConfigUpdater.needsUpdate(loadedConfig)) {
+          if (window.confirm('Your configuration file is outdated and will be automatically updated. It is recommended that you don\'t overwrite it when saving as to avoid potentially unwanted changes. Are you sure you want to do this?')) {
+            const newConfig = ConfigUpdater.updateConfig(loadedConfig)
+            setConfig(newConfig)
+          }
+        } else {
+          setConfig(loadedConfig)
+        }
       } catch (e) {
         console.error(e)
       }
@@ -162,7 +168,7 @@ function App() {
         newConfig={newConfig}
         loadConfig={loadConfig}
         saveConfig={saveConfig}
-        interfaceConfig={{interface: config.interface, controller: config.controller}}
+        interfaceConfig={config ? {interface: config.interface, controller: config.controller} : {interface: {}, controller: {}}}
         modifyInterface={modifyInterface}
         states={states}
         selectedState={selectedState}

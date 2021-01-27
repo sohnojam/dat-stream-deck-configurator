@@ -3,7 +3,7 @@ import unversioned from './unversioned'
 
 function needsUpdate(config) {
   const currentVersion = 'cv1'
-  return versionChecker(config) === currentVersion
+  return versionChecker(config) !== currentVersion
 }
 
 function updateConfig(config) {
@@ -23,6 +23,7 @@ function updateConfig(config) {
 }
 
 const ConfigUpdater = {
+  needsUpdate,
   updateConfig
 }
 
