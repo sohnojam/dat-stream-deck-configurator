@@ -59,6 +59,7 @@ function App() {
     >
       <Body
         version="v0.2.0"
+        configVersion="cv2"
       />
     </ThemeProvider>
   )

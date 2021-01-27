@@ -31,6 +31,7 @@ import IconKeys from '@material-ui/icons/Keyboard'
 // Classes
 const useStyles = makeStyles((theme) => ({
   root: {
+    flexGrow: 1,
     width: '100%',
     backgroundColor: theme.palette.background.paper
   },

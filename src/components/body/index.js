@@ -34,7 +34,8 @@ const useStyles = makeStyles((theme) => ({
 //
 // Components
 function Body({
-  version
+  version,
+  configVersion
 }) {
 
   const classes = useStyles()
@@ -77,6 +78,7 @@ function Body({
           keys: handleScreenKeys
         }}
         version={version}
+        configVersion={configVersion}
       />
 
       <MuiContainer>

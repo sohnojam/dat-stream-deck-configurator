@@ -13,6 +13,7 @@ import { makeStyles } from '@material-ui/core/styles'
 // Mui Components
 import MuiDrawer from '@material-ui/core/Drawer'
 import MuiToolbar from '@material-ui/core/Toolbar'
+import MuiTypography from '@material-ui/core/Typography'
 
 //
 // Classes
@@ -26,7 +27,17 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper
   },
   drawerContainer: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
     overflow: 'auto'
+  },
+  version: {
+    alignSelf: 'center',
+    paddingRight: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    color: theme.palette.text.disabled
   }
 }))
 
@@ -35,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
 function Drawer({
   selected,
   onClick,
-  version
+  version,
+  configVersion
 }) {
 
   const classes = useStyles()
@@ -59,8 +71,14 @@ function Drawer({
           <List
             selected={selected}
             onClick={onClick}
-            version={version}
           />
+
+          <MuiTypography
+            className={classes.version}
+            variant="body1"
+          >
+            {`${version} - ${configVersion}`}
+          </MuiTypography>
 
         </div>
 

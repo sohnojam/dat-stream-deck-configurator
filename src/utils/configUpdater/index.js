@@ -4,7 +4,7 @@ import cv1 from './cv1'
 
 function needsUpdate(config) {
   const currentVersion = 'cv2'
-  return versionChecker(config) === currentVersion
+  return versionChecker(config) !== currentVersion
 }
 
 function updateConfig(config) {
@@ -26,6 +26,7 @@ function updateConfig(config) {
 }
 
 const ConfigUpdater = {
+  needsUpdate,
   updateConfig
 }
 
