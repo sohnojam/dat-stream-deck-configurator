@@ -4,6 +4,11 @@
 // Core
 import React from 'react'
 
+// Utils
+import initialConfig from './utils/initialConfig'
+import formatKeys from './utils/formatKeys'
+import formatStates from './utils/formatStates'
+
 // Components
 import Body from './components/body'
 
@@ -53,11 +58,18 @@ const theme = createMuiTheme({
 // Component
 function App() {
 
+  //
+  // Config data
+  const [config, setConfig] = React.useState(initialConfig)
+
   return (
     <ThemeProvider
       theme={theme}
     >
       <Body
+        config={config}
+        states={formatStates(config)}
+        keys={formatKeys(config)}
         version="v0.2.0"
         configVersion="cv2"
       />

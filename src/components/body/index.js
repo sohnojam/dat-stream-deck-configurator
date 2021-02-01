@@ -9,6 +9,8 @@ import Header from '../header'
 import Drawer from '../drawer'
 import Home from '../home'
 import Interface from '../interface'
+import States from '../states'
+import Keys from '../keys'
 
 // Styles
 import { makeStyles } from '@material-ui/core/styles'
@@ -34,6 +36,9 @@ const useStyles = makeStyles((theme) => ({
 //
 // Components
 function Body({
+  config,
+  states,
+  keys,
   version,
   configVersion
 }) {
@@ -97,15 +102,22 @@ function Body({
           : screen === 'interface' ?
 
             <Interface
+              config={config}
             />
 
           : screen === 'states' ?
 
-            null
+            <States
+              config={config}
+              states={states}
+            />
           
           : screen === 'keys' ?
 
-            null
+            <Keys
+              config={config}
+              keys={keys}
+            />
 
           : null }
 
